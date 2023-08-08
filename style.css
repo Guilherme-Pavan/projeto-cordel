@@ -1,12 +1,23 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2: 'Passion One', cursive; /*Será utilizada em títulos*/
+    --font3: 'Sriracha', cursive; /*Será usada no conteúdo do texto*/ 
+}
+
 *{
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 }
 html, body{
     min-height: 100vh;
     background-color: darkgray;  
+    font-family: var(--font1);
 }
 header{
     background-color: black;
@@ -15,8 +26,11 @@ header{
 
 }
 header h1{
+    font-size: 10vw; /*Ajustou o tamanho do título. E além do mais, conforme o tamanho do ajuste da tela ele vai se adaptando da melhor maneira, o "vw - Que é o tamanho da fonte com relação a largura do fundo branco" foi utilizado para realizar a configuração. */
     padding-top: 50px;
     font-variant: small-caps;
+    font-family: var(--font2)
+    
 }
 header > p{
     padding-bottom: 50px;
@@ -33,7 +47,9 @@ section{
     padding-top: 10vh;
     padding-bottom: 10vh;
     line-height: 2em;
-    padding-left: 30px;
+    padding-left: 30px; 
+    font-family: var(--font3);
+    font-size: 2.4vw;
 }
 section.normal{
     background-color: white;
@@ -44,8 +60,9 @@ section.imagem {
     color: white;
 }
 section.imagem > p{
+    padding: 5px;
     background-color: black;
-    width: 400px;
+    display: inline-block;
 }
 footer{
     background-color: black;
